@@ -1,1 +1,2 @@
-Eerste commit met Git-it
+Eerste commit met Git-it.
+Nog een regel toegevoegd.
