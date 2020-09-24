@@ -1,6 +1,9 @@
-// import {animalData} from 'animal-data.mjs';
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-// console.log(animalData);
+import animalData from './animal-data.js';
+
+console.log(animalData);
 
 function Header(props) {
     return (
