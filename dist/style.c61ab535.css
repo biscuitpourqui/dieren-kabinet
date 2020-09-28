@@ -1,0 +1,15 @@
+html {
+    background: hsl(200, 34%, 60%);
+    font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
+}
+
+main {
+    display: grid;
+    min-height: 100vh;
+}
+
+.tile {
+    font-size: 1rem;
+}
+
+/*# sourceMappingURL=/style.c61ab535.css.map */

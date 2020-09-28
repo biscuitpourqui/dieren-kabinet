@@ -28292,50 +28292,42 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-
-var _animalData;
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-var animalData = (_animalData = {
-  seaLion: {
-    name: 'Sea Lion',
-    year: 1722,
-    source: 'www.archive.org',
-    orientation: 'landscape'
-  },
-  giraffe: {
-    name: 'Giraffe',
-    year: 1500,
-    source: 'www.archive.org',
-    orientation: 'square'
-  }
-}, _defineProperty(_animalData, "giraffe", {
+var animalData = [{
+  name: 'Sea Lion',
+  year: 1722,
+  source: 'www.archive.org',
+  orientation: 'landscape'
+}, {
+  name: 'Giraffe',
+  year: 1500,
+  source: 'www.archive.org',
+  orientation: 'square'
+}, {
   name: 'Giraffe',
   year: 1832,
   source: 'www.archive.org',
   orientation: 'portrait'
-}), _defineProperty(_animalData, "tamandua", {
+}, {
   name: 'Tamandua Anteater',
   year: 1770,
   source: 'www.archive.org',
   orientation: 'square'
-}), _defineProperty(_animalData, "anteater", {
+}, {
   name: 'Giant Anteater',
   year: 1760,
   source: 'www.archive.org',
   orientation: 'square'
-}), _defineProperty(_animalData, "spermWhale", {
+}, {
   name: 'Sperm Whale',
   year: 1888,
   source: 'www.archive.org',
   orientation: 'landscape'
-}), _defineProperty(_animalData, "gorilla", {
+}, {
   name: 'Gorilla',
   year: 1700,
   source: 'www.archive.org',
   orientation: 'square'
-}), _animalData);
+}];
 var _default = animalData;
 exports.default = _default;
 },{}],"src/animal-tile.js":[function(require,module,exports) {
@@ -28425,7 +28417,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51539" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50937" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
