@@ -15,6 +15,7 @@
     "defaults"
   ],
   "dependencies": {
+    "img": "^3.0.3",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },

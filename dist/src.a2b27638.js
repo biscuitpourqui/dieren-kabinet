@@ -28337,6 +28337,8 @@ var animalData = [{
 }];
 var _default = animalData;
 exports.default = _default;
+},{}],"img/400px/seaLion1722.png":[function(require,module,exports) {
+module.exports = "/seaLion1722.114df4e2.png";
 },{}],"src/animal-tile.js":[function(require,module,exports) {
 "use strict";
 
@@ -28354,13 +28356,13 @@ var AnimalTile = function AnimalTile(props) {
     className: "tile ".concat(props.animal.orientation),
     href: "#"
   }, /*#__PURE__*/_react.default.createElement("figure", null, /*#__PURE__*/_react.default.createElement("img", {
-    src: "./img/400px/".concat(props.animal.id)
+    src: require("../img/400px/seaLion1722.png")
   }), /*#__PURE__*/_react.default.createElement("figcaption", null, /*#__PURE__*/_react.default.createElement("h3", null, props.animal.name))));
 };
 
 var _default = AnimalTile;
 exports.default = _default;
-},{"react":"node_modules/react/index.js"}],"src/index.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../img/400px/seaLion1722.png":"img/400px/seaLion1722.png"}],"src/index.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -28374,6 +28376,10 @@ var _animalTile = _interopRequireDefault(require("./animal-tile.js"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 console.clear();
+
+var testPicture = require('../img/400px/seaLion1722.png');
+
+var name = 'seaLion1722';
 var tileNumbers = [1, 2, 3, 4, 5, 6];
 var animalTiles = tileNumbers.map(function (index) {
   return /*#__PURE__*/_react.default.createElement(_animalTile.default, {
@@ -28392,13 +28398,15 @@ function Header(props) {
 function App(props) {
   return /*#__PURE__*/_react.default.createElement("div", {
     id: "app"
-  }, /*#__PURE__*/_react.default.createElement(Header, null), /*#__PURE__*/_react.default.createElement("main", null, animalTiles));
+  }, /*#__PURE__*/_react.default.createElement(Header, null), /*#__PURE__*/_react.default.createElement("img", {
+    src: require("../img/400px/".concat(name, ".png"))
+  }), /*#__PURE__*/_react.default.createElement("main", null, animalTiles));
 }
 
 ;
 
 _reactDom.default.render( /*#__PURE__*/_react.default.createElement(App, null), document.getElementById('root'));
-},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","./animal-data.js":"src/animal-data.js","./animal-tile.js":"src/animal-tile.js"}],"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","./animal-data.js":"src/animal-data.js","./animal-tile.js":"src/animal-tile.js","../img/400px/seaLion1722.png":"img/400px/seaLion1722.png"}],"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;

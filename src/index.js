@@ -6,6 +6,9 @@ import ReactDOM from 'react-dom';
 import animalData from './animal-data.js';
 import AmimalTile from './animal-tile.js';
 
+const testPicture = require('../img/400px/seaLion1722.png');
+const name = 'seaLion1722';
+
 let tileNumbers = [1, 2, 3, 4, 5, 6];
 
 let animalTiles = tileNumbers.map(index => (
@@ -39,6 +42,7 @@ function App(props) {
             id="app"
         >
             <Header />
+            <img src={require(`../img/400px/${name}.png`)} />
             <main>
                 {animalTiles}
             </main>
