@@ -6,15 +6,14 @@ import ReactDOM from 'react-dom';
 import animalData from './animal-data.js';
 import AmimalTile from './animal-tile.js';
 
-console.log(animalData[2]);
-
 let tileNumbers = [1, 2, 3, 4, 5, 6];
 
-let AnimalTiles = tileNumbers.map(index => 
-    (
-        <AmimalTile animal={animalData[index]}
-            key={index} />
-    ));
+let animalTiles = tileNumbers.map(index => (
+        <AmimalTile 
+            animal={animalData[index]}
+            key={index}
+             />)
+    );
 
 function Header(props) {
     return (
@@ -40,9 +39,8 @@ function App(props) {
             id="app"
         >
             <Header />
-            <h4>Waar zijn mijn ongeziene dieren?</h4>
             <main>
-                {AnimalTiles}
+                {animalTiles}
             </main>
         </div>
     )

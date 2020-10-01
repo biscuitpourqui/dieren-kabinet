@@ -4,10 +4,17 @@ html {
 }
 
 main {
+    z-index: -10;
     display: grid;
-    min-height: 100vh;
+    /* min-height: 100vh; */
+    grid-template-rows: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 
 .tile {
     font-size: 1rem;
+}
+
+.tile:nth-child(2n) {
+    background-color: firebrick;
 }

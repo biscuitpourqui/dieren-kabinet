@@ -28293,36 +28293,43 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 var animalData = [{
+  id: 'seaLion1722',
   name: 'Sea Lion',
   year: 1722,
   source: 'www.archive.org',
   orientation: 'landscape'
 }, {
+  id: 'giraffe1500',
   name: 'Giraffe',
   year: 1500,
   source: 'www.archive.org',
   orientation: 'square'
 }, {
+  id: 'giraffe1832',
   name: 'Giraffe',
   year: 1832,
   source: 'www.archive.org',
   orientation: 'portrait'
 }, {
+  id: 'tamandua1770',
   name: 'Tamandua Anteater',
   year: 1770,
   source: 'www.archive.org',
   orientation: 'square'
 }, {
+  id: 'anteater1760',
   name: 'Giant Anteater',
   year: 1760,
   source: 'www.archive.org',
   orientation: 'square'
 }, {
+  id: 'spermWhale1888',
   name: 'Sperm Whale',
   year: 1888,
   source: 'www.archive.org',
   orientation: 'landscape'
 }, {
+  id: 'gorilla1700',
   name: 'Gorilla',
   year: 1700,
   source: 'www.archive.org',
@@ -28343,9 +28350,12 @@ var _react = _interopRequireDefault(require("react"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var AnimalTile = function AnimalTile(props) {
-  return /*#__PURE__*/_react.default.createElement("div", {
-    className: "tile ".concat(props.animal.orientation)
-  }, /*#__PURE__*/_react.default.createElement("h3", null, props.animal.name));
+  return /*#__PURE__*/_react.default.createElement("a", {
+    className: "tile ".concat(props.animal.orientation),
+    href: "#"
+  }, /*#__PURE__*/_react.default.createElement("figure", null, /*#__PURE__*/_react.default.createElement("img", {
+    src: "./img/400px/".concat(props.animal.id)
+  }), /*#__PURE__*/_react.default.createElement("figcaption", null, /*#__PURE__*/_react.default.createElement("h3", null, props.animal.name))));
 };
 
 var _default = AnimalTile;
@@ -28364,9 +28374,8 @@ var _animalTile = _interopRequireDefault(require("./animal-tile.js"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 console.clear();
-console.log(_animalData.default[2]);
 var tileNumbers = [1, 2, 3, 4, 5, 6];
-var AnimalTiles = tileNumbers.map(function (index) {
+var animalTiles = tileNumbers.map(function (index) {
   return /*#__PURE__*/_react.default.createElement(_animalTile.default, {
     animal: _animalData.default[index],
     key: index
@@ -28383,7 +28392,7 @@ function Header(props) {
 function App(props) {
   return /*#__PURE__*/_react.default.createElement("div", {
     id: "app"
-  }, /*#__PURE__*/_react.default.createElement(Header, null), /*#__PURE__*/_react.default.createElement("h4", null, "Waar zijn mijn ongeziene dieren?"), /*#__PURE__*/_react.default.createElement("main", null, AnimalTiles));
+  }, /*#__PURE__*/_react.default.createElement(Header, null), /*#__PURE__*/_react.default.createElement("main", null, animalTiles));
 }
 
 ;
@@ -28417,7 +28426,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50937" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59395" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

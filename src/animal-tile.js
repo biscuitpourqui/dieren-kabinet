@@ -2,12 +2,18 @@ import React from 'react';
 
 const AnimalTile = (props) => {
     return (
-        <div
+        <a
             className={`tile ${props.animal.orientation}`}
-               
+            href='#'   
         >
-            <h3>{props.animal.name}</h3>
-        </div>
+            <figure>
+                <img 
+                    src={`./img/400px/${props.animal.id}`} />
+                <figcaption>
+                    <h3>{props.animal.name}</h3>
+                </figcaption>
+            </figure>
+        </a>
     )
 };
 
