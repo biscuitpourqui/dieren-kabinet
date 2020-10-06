@@ -8,7 +8,8 @@ const AnimalTile = (props) => {
         >
             <figure>
                 <img 
-                    src={require(`../img/400px/seaLion1722.png`)} />
+                    src={props.animalImages[props.animal.id]} 
+                />
                 <figcaption>
                     <h3>{props.animal.name}</h3>
                 </figcaption>

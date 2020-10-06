@@ -28337,9 +28337,31 @@ var animalData = [{
 }];
 var _default = animalData;
 exports.default = _default;
+},{}],"img/400px/anteater1760.png":[function(require,module,exports) {
+module.exports = "/anteater1760.74377ee2.png";
+},{}],"img/400px/giraffe1500.png":[function(require,module,exports) {
+module.exports = "/giraffe1500.d9aa3f76.png";
+},{}],"img/400px/gorilla1800.png":[function(require,module,exports) {
+module.exports = "/gorilla1800.d7461099.png";
 },{}],"img/400px/seaLion1722.png":[function(require,module,exports) {
 module.exports = "/seaLion1722.114df4e2.png";
-},{}],"src/animal-tile.js":[function(require,module,exports) {
+},{}],"img/400px/giraffe1832.png":[function(require,module,exports) {
+module.exports = "/giraffe1832.2f144665.png";
+},{}],"img/400px/tamandua1770.png":[function(require,module,exports) {
+module.exports = "/tamandua1770.1d5c14c6.png";
+},{}],"img/400px/spermWhale1888.png":[function(require,module,exports) {
+module.exports = "/spermWhale1888.22d35d9b.png";
+},{}],"img/400px/*.png":[function(require,module,exports) {
+module.exports = {
+  "anteater1760": require("./anteater1760.png"),
+  "giraffe1500": require("./giraffe1500.png"),
+  "gorilla1800": require("./gorilla1800.png"),
+  "seaLion1722": require("./seaLion1722.png"),
+  "giraffe1832": require("./giraffe1832.png"),
+  "tamandua1770": require("./tamandua1770.png"),
+  "spermWhale1888": require("./spermWhale1888.png")
+};
+},{"./anteater1760.png":"img/400px/anteater1760.png","./giraffe1500.png":"img/400px/giraffe1500.png","./gorilla1800.png":"img/400px/gorilla1800.png","./seaLion1722.png":"img/400px/seaLion1722.png","./giraffe1832.png":"img/400px/giraffe1832.png","./tamandua1770.png":"img/400px/tamandua1770.png","./spermWhale1888.png":"img/400px/spermWhale1888.png"}],"src/animal-tile.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -28356,13 +28378,13 @@ var AnimalTile = function AnimalTile(props) {
     className: "tile ".concat(props.animal.orientation),
     href: "#"
   }, /*#__PURE__*/_react.default.createElement("figure", null, /*#__PURE__*/_react.default.createElement("img", {
-    src: require("../img/400px/seaLion1722.png")
+    src: props.animalImages[props.animal.id]
   }), /*#__PURE__*/_react.default.createElement("figcaption", null, /*#__PURE__*/_react.default.createElement("h3", null, props.animal.name))));
 };
 
 var _default = AnimalTile;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","../img/400px/seaLion1722.png":"img/400px/seaLion1722.png"}],"src/index.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js"}],"src/index.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -28370,6 +28392,8 @@ var _react = _interopRequireDefault(require("react"));
 var _reactDom = _interopRequireDefault(require("react-dom"));
 
 var _animalData = _interopRequireDefault(require("./animal-data.js"));
+
+var _ = _interopRequireDefault(require("../img/400px/*.png"));
 
 var _animalTile = _interopRequireDefault(require("./animal-tile.js"));
 
@@ -28379,11 +28403,13 @@ console.clear();
 
 var testPicture = require('../img/400px/seaLion1722.png');
 
+console.log(_.default);
 var name = 'seaLion1722';
 var tileNumbers = [1, 2, 3, 4, 5, 6];
 var animalTiles = tileNumbers.map(function (index) {
   return /*#__PURE__*/_react.default.createElement(_animalTile.default, {
     animal: _animalData.default[index],
+    animalImages: _.default,
     key: index
   });
 });
@@ -28399,14 +28425,14 @@ function App(props) {
   return /*#__PURE__*/_react.default.createElement("div", {
     id: "app"
   }, /*#__PURE__*/_react.default.createElement(Header, null), /*#__PURE__*/_react.default.createElement("img", {
-    src: require("../img/400px/".concat(name, ".png"))
+    src: _.default[name]
   }), /*#__PURE__*/_react.default.createElement("main", null, animalTiles));
 }
 
 ;
 
 _reactDom.default.render( /*#__PURE__*/_react.default.createElement(App, null), document.getElementById('root'));
-},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","./animal-data.js":"src/animal-data.js","./animal-tile.js":"src/animal-tile.js","../img/400px/seaLion1722.png":"img/400px/seaLion1722.png"}],"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","./animal-data.js":"src/animal-data.js","../img/400px/*.png":"img/400px/*.png","./animal-tile.js":"src/animal-tile.js","../img/400px/seaLion1722.png":"img/400px/seaLion1722.png"}],"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -28434,7 +28460,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59395" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50390" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

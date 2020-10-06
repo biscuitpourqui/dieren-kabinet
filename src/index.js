@@ -4,9 +4,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import animalData from './animal-data.js';
+import animalImages from '../img/400px/*.png';
 import AmimalTile from './animal-tile.js';
 
 const testPicture = require('../img/400px/seaLion1722.png');
+console.log(animalImages);
 const name = 'seaLion1722';
 
 let tileNumbers = [1, 2, 3, 4, 5, 6];
@@ -14,6 +16,7 @@ let tileNumbers = [1, 2, 3, 4, 5, 6];
 let animalTiles = tileNumbers.map(index => (
         <AmimalTile 
             animal={animalData[index]}
+            animalImages={animalImages}
             key={index}
              />)
     );
@@ -42,7 +45,7 @@ function App(props) {
             id="app"
         >
             <Header />
-            <img src={require(`../img/400px/${name}.png`)} />
+            <img src={animalImages[name]} />
             <main>
                 {animalTiles}
             </main>
