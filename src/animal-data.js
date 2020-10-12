@@ -42,9 +42,9 @@ const animalData = [
         orientation: 'landscape'
     },
     {
-        id: 'gorilla1700',
+        id: 'gorilla1800',
         name: 'Gorilla',
-        year: 1700,
+        year: 1800,
         source: 'www.archive.org',
         orientation: 'square'
     },

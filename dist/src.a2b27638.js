@@ -28329,9 +28329,9 @@ var animalData = [{
   source: 'www.archive.org',
   orientation: 'landscape'
 }, {
-  id: 'gorilla1700',
+  id: 'gorilla1800',
   name: 'Gorilla',
-  year: 1700,
+  year: 1800,
   source: 'www.archive.org',
   orientation: 'square'
 }];
@@ -28341,27 +28341,27 @@ exports.default = _default;
 module.exports = "/anteater1760.74377ee2.png";
 },{}],"img/400px/giraffe1500.png":[function(require,module,exports) {
 module.exports = "/giraffe1500.d9aa3f76.png";
+},{}],"img/400px/giraffe1832.png":[function(require,module,exports) {
+module.exports = "/giraffe1832.2f144665.png";
 },{}],"img/400px/gorilla1800.png":[function(require,module,exports) {
 module.exports = "/gorilla1800.d7461099.png";
 },{}],"img/400px/seaLion1722.png":[function(require,module,exports) {
 module.exports = "/seaLion1722.114df4e2.png";
-},{}],"img/400px/giraffe1832.png":[function(require,module,exports) {
-module.exports = "/giraffe1832.2f144665.png";
-},{}],"img/400px/tamandua1770.png":[function(require,module,exports) {
-module.exports = "/tamandua1770.1d5c14c6.png";
 },{}],"img/400px/spermWhale1888.png":[function(require,module,exports) {
 module.exports = "/spermWhale1888.22d35d9b.png";
+},{}],"img/400px/tamandua1770.png":[function(require,module,exports) {
+module.exports = "/tamandua1770.1d5c14c6.png";
 },{}],"img/400px/*.png":[function(require,module,exports) {
 module.exports = {
   "anteater1760": require("./anteater1760.png"),
   "giraffe1500": require("./giraffe1500.png"),
+  "giraffe1832": require("./giraffe1832.png"),
   "gorilla1800": require("./gorilla1800.png"),
   "seaLion1722": require("./seaLion1722.png"),
-  "giraffe1832": require("./giraffe1832.png"),
-  "tamandua1770": require("./tamandua1770.png"),
-  "spermWhale1888": require("./spermWhale1888.png")
+  "spermWhale1888": require("./spermWhale1888.png"),
+  "tamandua1770": require("./tamandua1770.png")
 };
-},{"./anteater1760.png":"img/400px/anteater1760.png","./giraffe1500.png":"img/400px/giraffe1500.png","./gorilla1800.png":"img/400px/gorilla1800.png","./seaLion1722.png":"img/400px/seaLion1722.png","./giraffe1832.png":"img/400px/giraffe1832.png","./tamandua1770.png":"img/400px/tamandua1770.png","./spermWhale1888.png":"img/400px/spermWhale1888.png"}],"src/animal-tile.js":[function(require,module,exports) {
+},{"./anteater1760.png":"img/400px/anteater1760.png","./giraffe1500.png":"img/400px/giraffe1500.png","./giraffe1832.png":"img/400px/giraffe1832.png","./gorilla1800.png":"img/400px/gorilla1800.png","./seaLion1722.png":"img/400px/seaLion1722.png","./spermWhale1888.png":"img/400px/spermWhale1888.png","./tamandua1770.png":"img/400px/tamandua1770.png"}],"src/animal-tile.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -28432,7 +28432,7 @@ function App(props) {
 ;
 
 _reactDom.default.render( /*#__PURE__*/_react.default.createElement(App, null), document.getElementById('root'));
-},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","./animal-data.js":"src/animal-data.js","../img/400px/*.png":"img/400px/*.png","./animal-tile.js":"src/animal-tile.js","../img/400px/seaLion1722.png":"img/400px/seaLion1722.png"}],"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","./animal-data.js":"src/animal-data.js","../img/400px/*.png":"img/400px/*.png","./animal-tile.js":"src/animal-tile.js","../img/400px/seaLion1722.png":"img/400px/seaLion1722.png"}],"../../../../usr/local/lib/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -28460,7 +28460,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50390" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "45221" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -28636,5 +28636,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","src/index.js"], null)
+},{}]},{},["../../../../usr/local/lib/node_modules/parcel/src/builtins/hmr-runtime.js","src/index.js"], null)
 //# sourceMappingURL=/src.a2b27638.js.map

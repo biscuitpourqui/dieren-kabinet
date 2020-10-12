@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background: hsl(200, 34%, 60%);
+    font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
+}
+
+main {
+    z-index: -10;
+    display: grid;
+    /* min-height: 100vh; */
+    grid-template-rows: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.tile {
+    font-size: 1rem;
+    position: relative;
+    &.landscape {
+        grid-column: span 2;
+    }
+    &.portrait {
+        grid-row: span 2;
+    }
+    img {
+        display: block;
+        object-fit: cover;
+        width: 100%;
+    }
+    figcaption {
+        position: absolute;
+        bottom: 0;
+        padding: 6px;
+        background-color: aquamarine;
+    }
+}
+
+.tile:nth-child(2n) {
+    background-color: firebrick;
+}

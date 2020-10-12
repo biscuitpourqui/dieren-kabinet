@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background: #76a5bc;
+  font-family: "Gill Sans", "Gill Sans MT", sans-serif;
+}
+
+main {
+  z-index: -10;
+  display: grid;
+  /* min-height: 100vh; */
+  grid-template-rows: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.tile {
+  font-size: 1rem;
+  position: relative;
+}
+.tile.landscape {
+  grid-column: span 2;
+}
+.tile.portrait {
+  grid-row: span 2;
+}
+.tile img {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+}
+.tile figcaption {
+  position: absolute;
+  bottom: 0;
+  padding: 6px;
+  background-color: aquamarine;
+}
+
+.tile:nth-child(2n) {
+  background-color: firebrick;
+}
+
+/*# sourceMappingURL=/style.6d80b553.css.map */
