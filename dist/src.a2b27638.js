@@ -28285,7 +28285,56 @@ if ("development" === 'production') {
 } else {
   module.exports = require('./cjs/react-dom.development.js');
 }
-},{"./cjs/react-dom.development.js":"node_modules/react-dom/cjs/react-dom.development.js"}],"src/animal-data.js":[function(require,module,exports) {
+},{"./cjs/react-dom.development.js":"node_modules/react-dom/cjs/react-dom.development.js"}],"img/400px/anteater1760.png":[function(require,module,exports) {
+module.exports = "/anteater1760.74377ee2.png";
+},{}],"img/400px/giraffe1832.png":[function(require,module,exports) {
+module.exports = "/giraffe1832.2f144665.png";
+},{}],"img/400px/giraffe1500.png":[function(require,module,exports) {
+module.exports = "/giraffe1500.d9aa3f76.png";
+},{}],"img/400px/gorilla1800.png":[function(require,module,exports) {
+module.exports = "/gorilla1800.d7461099.png";
+},{}],"img/400px/seaLion1722.png":[function(require,module,exports) {
+module.exports = "/seaLion1722.114df4e2.png";
+},{}],"img/400px/spermWhale1888.png":[function(require,module,exports) {
+module.exports = "/spermWhale1888.22d35d9b.png";
+},{}],"img/400px/tamandua1770.png":[function(require,module,exports) {
+module.exports = "/tamandua1770.1d5c14c6.png";
+},{}],"img/400px/*.png":[function(require,module,exports) {
+module.exports = {
+  "anteater1760": require("./anteater1760.png"),
+  "giraffe1832": require("./giraffe1832.png"),
+  "giraffe1500": require("./giraffe1500.png"),
+  "gorilla1800": require("./gorilla1800.png"),
+  "seaLion1722": require("./seaLion1722.png"),
+  "spermWhale1888": require("./spermWhale1888.png"),
+  "tamandua1770": require("./tamandua1770.png")
+};
+},{"./anteater1760.png":"img/400px/anteater1760.png","./giraffe1832.png":"img/400px/giraffe1832.png","./giraffe1500.png":"img/400px/giraffe1500.png","./gorilla1800.png":"img/400px/gorilla1800.png","./seaLion1722.png":"img/400px/seaLion1722.png","./spermWhale1888.png":"img/400px/spermWhale1888.png","./tamandua1770.png":"img/400px/tamandua1770.png"}],"src/animal-tile.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _ = _interopRequireDefault(require("../img/400px/*.png"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var AnimalTile = function AnimalTile(props) {
+  return /*#__PURE__*/_react.default.createElement("a", {
+    className: "tile ".concat(props.animal.orientation),
+    href: "#"
+  }, /*#__PURE__*/_react.default.createElement("figure", null, /*#__PURE__*/_react.default.createElement("img", {
+    src: _.default[props.animal.id]
+  }), /*#__PURE__*/_react.default.createElement("figcaption", null, /*#__PURE__*/_react.default.createElement("h3", null, props.animal.name))));
+};
+
+var _default = AnimalTile;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","../img/400px/*.png":"img/400px/*.png"}],"src/animal-data.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -28337,83 +28386,48 @@ var animalData = [{
 }];
 var _default = animalData;
 exports.default = _default;
-},{}],"img/400px/anteater1760.png":[function(require,module,exports) {
-module.exports = "/anteater1760.74377ee2.png";
-},{}],"img/400px/giraffe1500.png":[function(require,module,exports) {
-module.exports = "/giraffe1500.d9aa3f76.png";
-},{}],"img/400px/giraffe1832.png":[function(require,module,exports) {
-module.exports = "/giraffe1832.2f144665.png";
-},{}],"img/400px/gorilla1800.png":[function(require,module,exports) {
-module.exports = "/gorilla1800.d7461099.png";
-},{}],"img/400px/seaLion1722.png":[function(require,module,exports) {
-module.exports = "/seaLion1722.114df4e2.png";
-},{}],"img/400px/spermWhale1888.png":[function(require,module,exports) {
-module.exports = "/spermWhale1888.22d35d9b.png";
-},{}],"img/400px/tamandua1770.png":[function(require,module,exports) {
-module.exports = "/tamandua1770.1d5c14c6.png";
-},{}],"img/400px/*.png":[function(require,module,exports) {
-module.exports = {
-  "anteater1760": require("./anteater1760.png"),
-  "giraffe1500": require("./giraffe1500.png"),
-  "giraffe1832": require("./giraffe1832.png"),
-  "gorilla1800": require("./gorilla1800.png"),
-  "seaLion1722": require("./seaLion1722.png"),
-  "spermWhale1888": require("./spermWhale1888.png"),
-  "tamandua1770": require("./tamandua1770.png")
-};
-},{"./anteater1760.png":"img/400px/anteater1760.png","./giraffe1500.png":"img/400px/giraffe1500.png","./giraffe1832.png":"img/400px/giraffe1832.png","./gorilla1800.png":"img/400px/gorilla1800.png","./seaLion1722.png":"img/400px/seaLion1722.png","./spermWhale1888.png":"img/400px/spermWhale1888.png","./tamandua1770.png":"img/400px/tamandua1770.png"}],"src/animal-tile.js":[function(require,module,exports) {
+},{}],"src/tiled-animals.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = void 0;
+exports.default = TiledAnimals;
 
 var _react = _interopRequireDefault(require("react"));
 
+var _animalTile = _interopRequireDefault(require("./animal-tile.js"));
+
+var _animalData = _interopRequireDefault(require("./animal-data.js"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var AnimalTile = function AnimalTile(props) {
-  return /*#__PURE__*/_react.default.createElement("a", {
-    className: "tile ".concat(props.animal.orientation),
-    href: "#"
-  }, /*#__PURE__*/_react.default.createElement("figure", null, /*#__PURE__*/_react.default.createElement("img", {
-    src: props.animalImages[props.animal.id]
-  }), /*#__PURE__*/_react.default.createElement("figcaption", null, /*#__PURE__*/_react.default.createElement("h3", null, props.animal.name))));
-};
-
-var _default = AnimalTile;
-exports.default = _default;
-},{"react":"node_modules/react/index.js"}],"src/index.js":[function(require,module,exports) {
+function TiledAnimals(props) {
+  var tileNumbers = [1, 2, 3, 4, 5, 6];
+  var animalTiles = tileNumbers.map(function (index) {
+    return /*#__PURE__*/_react.default.createElement(_animalTile.default, {
+      animal: _animalData.default[index],
+      key: index
+    });
+  });
+  return /*#__PURE__*/_react.default.createElement("main", null, animalTiles);
+}
+},{"react":"node_modules/react/index.js","./animal-tile.js":"src/animal-tile.js","./animal-data.js":"src/animal-data.js"}],"src/index.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
 
 var _reactDom = _interopRequireDefault(require("react-dom"));
 
-var _animalData = _interopRequireDefault(require("./animal-data.js"));
-
-var _ = _interopRequireDefault(require("../img/400px/*.png"));
-
-var _animalTile = _interopRequireDefault(require("./animal-tile.js"));
+var _tiledAnimals = _interopRequireDefault(require("./tiled-animals.js"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 console.clear();
 
-var testPicture = require('../img/400px/seaLion1722.png');
-
-console.log(_.default);
-var name = 'seaLion1722';
-var tileNumbers = [1, 2, 3, 4, 5, 6];
-var animalTiles = tileNumbers.map(function (index) {
-  return /*#__PURE__*/_react.default.createElement(_animalTile.default, {
-    animal: _animalData.default[index],
-    animalImages: _.default,
-    key: index
-  });
-});
-
+// const testPicture = require('../img/400px/seaLion1722.png');
+// console.log(animalImages);
+// const name = 'seaLion1722';
 function Header(props) {
   return /*#__PURE__*/_react.default.createElement("header", null, /*#__PURE__*/_react.default.createElement("h1", null, "Unseen Animals"), /*#__PURE__*/_react.default.createElement("ul", null, /*#__PURE__*/_react.default.createElement("li", null, "Refresh"), /*#__PURE__*/_react.default.createElement("li", null, "Random"), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("input", {
     type: "search",
@@ -28424,15 +28438,13 @@ function Header(props) {
 function App(props) {
   return /*#__PURE__*/_react.default.createElement("div", {
     id: "app"
-  }, /*#__PURE__*/_react.default.createElement(Header, null), /*#__PURE__*/_react.default.createElement("img", {
-    src: _.default[name]
-  }), /*#__PURE__*/_react.default.createElement("main", null, animalTiles));
+  }, /*#__PURE__*/_react.default.createElement(Header, null), /*#__PURE__*/_react.default.createElement(_tiledAnimals.default, null));
 }
 
 ;
 
 _reactDom.default.render( /*#__PURE__*/_react.default.createElement(App, null), document.getElementById('root'));
-},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","./animal-data.js":"src/animal-data.js","../img/400px/*.png":"img/400px/*.png","./animal-tile.js":"src/animal-tile.js","../img/400px/seaLion1722.png":"img/400px/seaLion1722.png"}],"../../../../usr/local/lib/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","./tiled-animals.js":"src/tiled-animals.js"}],"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -28460,7 +28472,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "45221" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50243" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -28636,5 +28648,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../../usr/local/lib/node_modules/parcel/src/builtins/hmr-runtime.js","src/index.js"], null)
+},{}]},{},["../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","src/index.js"], null)
 //# sourceMappingURL=/src.a2b27638.js.map

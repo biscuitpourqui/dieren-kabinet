@@ -6,19 +6,34 @@
 html {
     background: hsl(200, 34%, 60%);
     font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
+    --primary-color: hsl(345, 75%, 40%);
+}
+
+header {
+    z-index: 10;
+    color: var(--primary-color);
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    li {
+        display: inline;
+        margin: 0 8px;
+    }
 }
 
 main {
-    z-index: -10;
     display: grid;
-    /* min-height: 100vh; */
-    grid-template-rows: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-rows: minmax(200px, 1fr), repeat(auto-fill, minmax(200px, 1fr));
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-auto-flow: dense;
 }
 
 .tile {
     font-size: 1rem;
     position: relative;
+    &.square:nth-child(4n) {
+        grid-area: span 2 / span 2;
+    }
     &.landscape {
         grid-column: span 2;
     }

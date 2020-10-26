@@ -1,4 +1,6 @@
 import React from 'react';
+import animalImages from '../img/400px/*.png';
+
 
 const AnimalTile = (props) => {
     return (
@@ -8,7 +10,7 @@ const AnimalTile = (props) => {
         >
             <figure>
                 <img 
-                    src={props.animalImages[props.animal.id]} 
+                    src={animalImages[props.animal.id]} 
                 />
                 <figcaption>
                     <h3>{props.animal.name}</h3>
