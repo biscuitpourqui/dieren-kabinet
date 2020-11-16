@@ -22,6 +22,7 @@ header {
 }
 
 main {
+    min-height: 100vh;
     display: grid;
     grid-template-rows: minmax(200px, 1fr), repeat(auto-fill, minmax(200px, 1fr));
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -29,9 +30,12 @@ main {
 }
 
 .tile {
+    figure {
+    height: 100%;
+    }
     font-size: 1rem;
     position: relative;
-    &.square:nth-child(4n) {
+    &.big {
         grid-area: span 2 / span 2;
     }
     &.landscape {
@@ -44,6 +48,7 @@ main {
         display: block;
         object-fit: cover;
         width: 100%;
+        height: 100%;
     }
     figcaption {
         position: absolute;

@@ -28287,14 +28287,14 @@ if ("development" === 'production') {
 }
 },{"./cjs/react-dom.development.js":"node_modules/react-dom/cjs/react-dom.development.js"}],"img/400px/anteater1760.png":[function(require,module,exports) {
 module.exports = "/anteater1760.74377ee2.png";
-},{}],"img/400px/giraffe1832.png":[function(require,module,exports) {
-module.exports = "/giraffe1832.2f144665.png";
 },{}],"img/400px/giraffe1500.png":[function(require,module,exports) {
 module.exports = "/giraffe1500.d9aa3f76.png";
-},{}],"img/400px/gorilla1800.png":[function(require,module,exports) {
-module.exports = "/gorilla1800.d7461099.png";
+},{}],"img/400px/giraffe1832.png":[function(require,module,exports) {
+module.exports = "/giraffe1832.2f144665.png";
 },{}],"img/400px/seaLion1722.png":[function(require,module,exports) {
 module.exports = "/seaLion1722.114df4e2.png";
+},{}],"img/400px/gorilla1800.png":[function(require,module,exports) {
+module.exports = "/gorilla1800.d7461099.png";
 },{}],"img/400px/spermWhale1888.png":[function(require,module,exports) {
 module.exports = "/spermWhale1888.22d35d9b.png";
 },{}],"img/400px/tamandua1770.png":[function(require,module,exports) {
@@ -28302,14 +28302,14 @@ module.exports = "/tamandua1770.1d5c14c6.png";
 },{}],"img/400px/*.png":[function(require,module,exports) {
 module.exports = {
   "anteater1760": require("./anteater1760.png"),
-  "giraffe1832": require("./giraffe1832.png"),
   "giraffe1500": require("./giraffe1500.png"),
-  "gorilla1800": require("./gorilla1800.png"),
+  "giraffe1832": require("./giraffe1832.png"),
   "seaLion1722": require("./seaLion1722.png"),
+  "gorilla1800": require("./gorilla1800.png"),
   "spermWhale1888": require("./spermWhale1888.png"),
   "tamandua1770": require("./tamandua1770.png")
 };
-},{"./anteater1760.png":"img/400px/anteater1760.png","./giraffe1832.png":"img/400px/giraffe1832.png","./giraffe1500.png":"img/400px/giraffe1500.png","./gorilla1800.png":"img/400px/gorilla1800.png","./seaLion1722.png":"img/400px/seaLion1722.png","./spermWhale1888.png":"img/400px/spermWhale1888.png","./tamandua1770.png":"img/400px/tamandua1770.png"}],"src/animal-tile.js":[function(require,module,exports) {
+},{"./anteater1760.png":"img/400px/anteater1760.png","./giraffe1500.png":"img/400px/giraffe1500.png","./giraffe1832.png":"img/400px/giraffe1832.png","./seaLion1722.png":"img/400px/seaLion1722.png","./gorilla1800.png":"img/400px/gorilla1800.png","./spermWhale1888.png":"img/400px/spermWhale1888.png","./tamandua1770.png":"img/400px/tamandua1770.png"}],"src/animal-tile.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -28402,11 +28402,54 @@ var _animalData = _interopRequireDefault(require("./animal-data.js"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+// import useWindowSize from './utils.js';
+// let windowSize = useWindowSize();
+// console.log(windowSize);
 function TiledAnimals(props) {
-  var tileNumbers = [1, 2, 3, 4, 5, 6];
-  var animalTiles = tileNumbers.map(function (index) {
+  function calculateNumberOfSquares(idealWidth, optionalIdealHeight) {
+    var idealHeight = optionalIdealHeight || idealWidth;
+    var columns = Math.floor(innerWidth / idealWidth);
+    var rows = Math.floor(innerHeight / idealHeight);
+    console.log(rows, columns);
+    return columns * rows;
+  }
+
+  function pickTileNumbers(numberOfSquares) {
+    var squaresToFill = numberOfSquares;
+    var numberArray = [];
+    var numberOfAnimals = _animalData.default.length;
+
+    var pickRandomAnimals = function pickRandomAnimals() {
+      if (squaresToFill == 0) {
+        return;
+      }
+
+      var randomNumber = Math.floor(Math.random() * numberOfAnimals);
+      var orientation = _animalData.default[randomNumber].orientation;
+
+      if (squaresToFill < 8 && orientation == 'portrait') {
+        pickRandomAnimals();
+      } else if (squaresToFill < 3 && orientation == 'landscape') {
+        pickRandomAnimals();
+      } // if (!numberArray.includes(randomNumber)) {
+      else if (true) {
+          orientation == 'square' ? squaresToFill-- : squaresToFill = squaresToFill - 2;
+          numberArray.push(randomNumber);
+        }
+
+      pickRandomAnimals();
+    };
+
+    pickRandomAnimals();
+    return numberArray;
+  }
+
+  ;
+  var tileNumbers = pickTileNumbers(calculateNumberOfSquares(200));
+  console.log(tileNumbers);
+  var animalTiles = tileNumbers.map(function (animalNumber, index) {
     return /*#__PURE__*/_react.default.createElement(_animalTile.default, {
-      animal: _animalData.default[index],
+      animal: _animalData.default[animalNumber],
       key: index
     });
   });
@@ -28472,7 +28515,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50243" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49868" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
