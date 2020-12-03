@@ -1,26 +1,41 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import AmimalTile from './animal-tile.js';
 
 import animalData from './animal-data.js';
 
-// import useWindowSize from './utils.js';
+import { useWindowSize } from './utils.js';
 
-// let windowSize = useWindowSize();
-// console.log(windowSize);
 
 export default function TiledAnimals(props) {
+    
+const tileWidth = 200;
+let windowSize = useWindowSize(500);
+
+const [numberOfSquares, setNumberOfSquares] = useState(0);
+const [animalIds, setAnimalIds] = useState([]);
+
+useEffect(() => updateSquareNumber()), [windowSize];
+useEffect(() => setAnimalIds(pickAnimalIds(numberOfSquares)), [numberOfSquares]);
 
 function calculateNumberOfSquares(idealWidth, optionalIdealHeight) {
     const idealHeight = optionalIdealHeight || idealWidth;
-    const columns = Math.floor(innerWidth/idealWidth);
-    const rows = Math.floor(innerHeight/idealHeight);
-    console.log(rows, columns);
+    const columns = Math.floor(windowSize.width/idealWidth);
+    const rows = Math.floor(windowSize.height/idealHeight);
+    console.log(columns, rows);
     return columns * rows;
 }
 
-function pickTileNumbers(numberOfSquares) {
-    let squaresToFill = numberOfSquares;
-    let numberArray = [];
+function updateSquareNumber() {
+    let newNumber = calculateNumberOfSquares(tileWidth);
+    if (!numberOfSquares || newNumber > numberOfSquares) {
+        setNumberOfSquares(newNumber)
+    } else {return}
+};
+
+function pickAnimalIds(numberOfSquaresToFill) {
+    let squaresToFill = numberOfSquaresToFill - animalIds.length;
+    console.log('vullen:', squaresToFill);
+    let newNumberArray = [];
     const numberOfAnimals = animalData.length;
     const pickRandomAnimals = () => {
         if (squaresToFill == 0) {return}
@@ -31,18 +46,16 @@ function pickTileNumbers(numberOfSquares) {
         // if (!numberArray.includes(randomNumber)) {
         else if (true) {
             orientation == 'square' ? squaresToFill-- : squaresToFill = squaresToFill - 2;
-            numberArray.push(randomNumber);
+            newNumberArray.push(randomNumber);
         }
         pickRandomAnimals();
     };
     pickRandomAnimals();
-    return numberArray;    
+    console.log('Pick:', newNumberArray);
+    return [...animalIds, ...newNumberArray];    
 };
 
-let tileNumbers = pickTileNumbers(calculateNumberOfSquares(200));
-console.log(tileNumbers);
-
-let animalTiles = tileNumbers.map((animalNumber, index) => (
+let animalTiles = animalIds.map((animalNumber, index) => (
         <AmimalTile 
             animal={animalData[animalNumber]}
             key={index}

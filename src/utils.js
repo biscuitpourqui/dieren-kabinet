@@ -1,9 +1,19 @@
-export function useWindowSize() {
-    // Initialize state with undefined width/height so server and client renders match
-    // Learn more here: https://joshwcomeau.com/react/the-perils-of-rehydration/
+import React, { useState, useEffect } from 'react';
+
+const debounce = (func, delay) => {
+  let inDebounce;
+  return function() {
+    
+    clearTimeout(inDebounce)
+    inDebounce = setTimeout(() => func(), delay)
+  }
+}
+
+export function useWindowSize(delay) {
+   
     const [windowSize, setWindowSize] = useState({
-      width: undefined,
-      height: undefined,
+      width: innerWidth,
+      height: innerHeight,
     });
   
     useEffect(() => {
@@ -17,7 +27,7 @@ export function useWindowSize() {
       }
       
       // Add event listener
-      window.addEventListener("resize", handleResize);
+      window.addEventListener("resize", debounce(handleResize, delay));
       
       // Call handler right away so state gets updated with initial window size
       handleResize();
