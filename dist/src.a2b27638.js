@@ -28285,299 +28285,7 @@ if ("development" === 'production') {
 } else {
   module.exports = require('./cjs/react-dom.development.js');
 }
-},{"./cjs/react-dom.development.js":"node_modules/react-dom/cjs/react-dom.development.js"}],"img/400px/giraffe1500.png":[function(require,module,exports) {
-module.exports = "/giraffe1500.d9aa3f76.png";
-},{}],"img/400px/anteater1760.png":[function(require,module,exports) {
-module.exports = "/anteater1760.74377ee2.png";
-},{}],"img/400px/giraffe1832.png":[function(require,module,exports) {
-module.exports = "/giraffe1832.2f144665.png";
-},{}],"img/400px/gorilla1800.png":[function(require,module,exports) {
-module.exports = "/gorilla1800.d7461099.png";
-},{}],"img/400px/seaLion1722.png":[function(require,module,exports) {
-module.exports = "/seaLion1722.114df4e2.png";
-},{}],"img/400px/spermWhale1888.png":[function(require,module,exports) {
-module.exports = "/spermWhale1888.22d35d9b.png";
-},{}],"img/400px/tamandua1770.png":[function(require,module,exports) {
-module.exports = "/tamandua1770.1d5c14c6.png";
-},{}],"img/400px/*.png":[function(require,module,exports) {
-module.exports = {
-  "giraffe1500": require("./giraffe1500.png"),
-  "anteater1760": require("./anteater1760.png"),
-  "giraffe1832": require("./giraffe1832.png"),
-  "gorilla1800": require("./gorilla1800.png"),
-  "seaLion1722": require("./seaLion1722.png"),
-  "spermWhale1888": require("./spermWhale1888.png"),
-  "tamandua1770": require("./tamandua1770.png")
-};
-},{"./giraffe1500.png":"img/400px/giraffe1500.png","./anteater1760.png":"img/400px/anteater1760.png","./giraffe1832.png":"img/400px/giraffe1832.png","./gorilla1800.png":"img/400px/gorilla1800.png","./seaLion1722.png":"img/400px/seaLion1722.png","./spermWhale1888.png":"img/400px/spermWhale1888.png","./tamandua1770.png":"img/400px/tamandua1770.png"}],"src/animal-tile.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _react = _interopRequireDefault(require("react"));
-
-var _ = _interopRequireDefault(require("../img/400px/*.png"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var AnimalTile = function AnimalTile(props) {
-  return /*#__PURE__*/_react.default.createElement("a", {
-    className: "tile ".concat(props.animal.orientation),
-    href: "#"
-  }, /*#__PURE__*/_react.default.createElement("figure", null, /*#__PURE__*/_react.default.createElement("img", {
-    src: _.default[props.animal.id]
-  }), /*#__PURE__*/_react.default.createElement("figcaption", null, /*#__PURE__*/_react.default.createElement("h3", null, props.animal.name))));
-};
-
-var _default = AnimalTile;
-exports.default = _default;
-},{"react":"node_modules/react/index.js","../img/400px/*.png":"img/400px/*.png"}],"src/animal-data.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var animalData = [{
-  id: 'seaLion1722',
-  name: 'Sea Lion',
-  year: 1722,
-  source: 'www.archive.org',
-  orientation: 'landscape'
-}, {
-  id: 'giraffe1500',
-  name: 'Giraffe',
-  year: 1500,
-  source: 'www.archive.org',
-  orientation: 'square'
-}, {
-  id: 'giraffe1832',
-  name: 'Giraffe',
-  year: 1832,
-  source: 'www.archive.org',
-  orientation: 'portrait'
-}, {
-  id: 'tamandua1770',
-  name: 'Tamandua Anteater',
-  year: 1770,
-  source: 'www.archive.org',
-  orientation: 'square'
-}, {
-  id: 'anteater1760',
-  name: 'Giant Anteater',
-  year: 1760,
-  source: 'www.archive.org',
-  orientation: 'square'
-}, {
-  id: 'spermWhale1888',
-  name: 'Sperm Whale',
-  year: 1888,
-  source: 'www.archive.org',
-  orientation: 'landscape'
-}, {
-  id: 'gorilla1800',
-  name: 'Gorilla',
-  year: 1800,
-  source: 'www.archive.org',
-  orientation: 'square'
-}];
-var _default = animalData;
-exports.default = _default;
-},{}],"src/utils.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.useWindowSize = useWindowSize;
-
-var _react = _interopRequireWildcard(require("react"));
-
-function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
-
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
-var debounce = function debounce(func, delay) {
-  var inDebounce;
-  return function () {
-    clearTimeout(inDebounce);
-    inDebounce = setTimeout(function () {
-      return func();
-    }, delay);
-  };
-};
-
-function useWindowSize(delay) {
-  var _useState = (0, _react.useState)({
-    width: innerWidth,
-    height: innerHeight
-  }),
-      _useState2 = _slicedToArray(_useState, 2),
-      windowSize = _useState2[0],
-      setWindowSize = _useState2[1];
-
-  (0, _react.useEffect)(function () {
-    // Handler to call on window resize
-    function handleResize() {
-      // Set window width/height to state
-      setWindowSize({
-        width: window.innerWidth,
-        height: window.innerHeight
-      });
-    } // Add event listener
-
-
-    window.addEventListener("resize", debounce(handleResize, delay)); // Call handler right away so state gets updated with initial window size
-
-    handleResize(); // Remove event listener on cleanup
-
-    return function () {
-      return window.removeEventListener("resize", handleResize);
-    };
-  }, []); // Empty array ensures that effect is only run on mount
-
-  return windowSize;
-}
-},{"react":"node_modules/react/index.js"}],"src/tiled-animals.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = TiledAnimals;
-
-var _react = _interopRequireWildcard(require("react"));
-
-var _animalTile = _interopRequireDefault(require("./animal-tile.js"));
-
-var _animalData = _interopRequireDefault(require("./animal-data.js"));
-
-var _utils = require("./utils.js");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
-
-function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
-
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
-
-function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
-
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
-function TiledAnimals(props) {
-  var tileWidth = 200;
-  var windowSize = (0, _utils.useWindowSize)(500);
-
-  var _useState = (0, _react.useState)(0),
-      _useState2 = _slicedToArray(_useState, 2),
-      numberOfSquares = _useState2[0],
-      setNumberOfSquares = _useState2[1];
-
-  var _useState3 = (0, _react.useState)([]),
-      _useState4 = _slicedToArray(_useState3, 2),
-      animalIds = _useState4[0],
-      setAnimalIds = _useState4[1];
-
-  (0, _react.useEffect)(function () {
-    return updateSquareNumber();
-  }), [windowSize];
-  (0, _react.useEffect)(function () {
-    return setAnimalIds(pickAnimalIds(numberOfSquares));
-  }, [numberOfSquares]);
-
-  function calculateNumberOfSquares(idealWidth, optionalIdealHeight) {
-    var idealHeight = optionalIdealHeight || idealWidth;
-    var columns = Math.floor(windowSize.width / idealWidth);
-    var rows = Math.floor(windowSize.height / idealHeight);
-    console.log(columns, rows);
-    return columns * rows;
-  }
-
-  function updateSquareNumber() {
-    var newNumber = calculateNumberOfSquares(tileWidth);
-
-    if (!numberOfSquares || newNumber > numberOfSquares) {
-      setNumberOfSquares(newNumber);
-    } else {
-      return;
-    }
-  }
-
-  ;
-
-  function pickAnimalIds(numberOfSquaresToFill) {
-    var squaresToFill = numberOfSquaresToFill - animalIds.length;
-    console.log('vullen:', squaresToFill);
-    var newNumberArray = [];
-    var numberOfAnimals = _animalData.default.length;
-
-    var pickRandomAnimals = function pickRandomAnimals() {
-      if (squaresToFill == 0) {
-        return;
-      }
-
-      var randomNumber = Math.floor(Math.random() * numberOfAnimals);
-      var orientation = _animalData.default[randomNumber].orientation;
-
-      if (squaresToFill < 8 && orientation == 'portrait') {
-        pickRandomAnimals();
-      } else if (squaresToFill < 3 && orientation == 'landscape') {
-        pickRandomAnimals();
-      } // if (!numberArray.includes(randomNumber)) {
-      else if (true) {
-          orientation == 'square' ? squaresToFill-- : squaresToFill = squaresToFill - 2;
-          newNumberArray.push(randomNumber);
-        }
-
-      pickRandomAnimals();
-    };
-
-    pickRandomAnimals();
-    console.log('Pick:', newNumberArray);
-    return [].concat(_toConsumableArray(animalIds), newNumberArray);
-  }
-
-  ;
-  var animalTiles = animalIds.map(function (animalNumber, index) {
-    return /*#__PURE__*/_react.default.createElement(_animalTile.default, {
-      animal: _animalData.default[animalNumber],
-      key: index
-    });
-  });
-  return /*#__PURE__*/_react.default.createElement("main", null, animalTiles);
-}
-},{"react":"node_modules/react/index.js","./animal-tile.js":"src/animal-tile.js","./animal-data.js":"src/animal-data.js","./utils.js":"src/utils.js"}],"node_modules/@babel/runtime/helpers/esm/inheritsLoose.js":[function(require,module,exports) {
+},{"./cjs/react-dom.development.js":"node_modules/react-dom/cjs/react-dom.development.js"}],"node_modules/@babel/runtime/helpers/esm/inheritsLoose.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -32561,7 +32269,301 @@ if ("development" !== "production") {
     style: _propTypes.default.object
   });
 }
-},{"react-router":"node_modules/react-router/esm/react-router.js","@babel/runtime/helpers/esm/inheritsLoose":"node_modules/@babel/runtime/helpers/esm/inheritsLoose.js","react":"node_modules/react/index.js","history":"node_modules/history/esm/history.js","prop-types":"node_modules/prop-types/index.js","tiny-warning":"node_modules/tiny-warning/dist/tiny-warning.esm.js","@babel/runtime/helpers/esm/extends":"node_modules/@babel/runtime/helpers/esm/extends.js","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js","tiny-invariant":"node_modules/tiny-invariant/dist/tiny-invariant.esm.js"}],"src/index.js":[function(require,module,exports) {
+},{"react-router":"node_modules/react-router/esm/react-router.js","@babel/runtime/helpers/esm/inheritsLoose":"node_modules/@babel/runtime/helpers/esm/inheritsLoose.js","react":"node_modules/react/index.js","history":"node_modules/history/esm/history.js","prop-types":"node_modules/prop-types/index.js","tiny-warning":"node_modules/tiny-warning/dist/tiny-warning.esm.js","@babel/runtime/helpers/esm/extends":"node_modules/@babel/runtime/helpers/esm/extends.js","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js","tiny-invariant":"node_modules/tiny-invariant/dist/tiny-invariant.esm.js"}],"img/400px/anteater1760.png":[function(require,module,exports) {
+module.exports = "/anteater1760.74377ee2.png";
+},{}],"img/400px/giraffe1500.png":[function(require,module,exports) {
+module.exports = "/giraffe1500.d9aa3f76.png";
+},{}],"img/400px/giraffe1832.png":[function(require,module,exports) {
+module.exports = "/giraffe1832.2f144665.png";
+},{}],"img/400px/seaLion1722.png":[function(require,module,exports) {
+module.exports = "/seaLion1722.114df4e2.png";
+},{}],"img/400px/tamandua1770.png":[function(require,module,exports) {
+module.exports = "/tamandua1770.1d5c14c6.png";
+},{}],"img/400px/spermWhale1888.png":[function(require,module,exports) {
+module.exports = "/spermWhale1888.22d35d9b.png";
+},{}],"img/400px/gorilla1800.png":[function(require,module,exports) {
+module.exports = "/gorilla1800.d7461099.png";
+},{}],"img/400px/*.png":[function(require,module,exports) {
+module.exports = {
+  "anteater1760": require("./anteater1760.png"),
+  "giraffe1500": require("./giraffe1500.png"),
+  "giraffe1832": require("./giraffe1832.png"),
+  "seaLion1722": require("./seaLion1722.png"),
+  "tamandua1770": require("./tamandua1770.png"),
+  "spermWhale1888": require("./spermWhale1888.png"),
+  "gorilla1800": require("./gorilla1800.png")
+};
+},{"./anteater1760.png":"img/400px/anteater1760.png","./giraffe1500.png":"img/400px/giraffe1500.png","./giraffe1832.png":"img/400px/giraffe1832.png","./seaLion1722.png":"img/400px/seaLion1722.png","./tamandua1770.png":"img/400px/tamandua1770.png","./spermWhale1888.png":"img/400px/spermWhale1888.png","./gorilla1800.png":"img/400px/gorilla1800.png"}],"src/animal-tile.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _reactRouterDom = require("react-router-dom");
+
+var _ = _interopRequireDefault(require("../img/400px/*.png"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var AnimalTile = function AnimalTile(props) {
+  return /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+    className: "tile ".concat(props.animal.orientation),
+    to: "/".concat(props.animal.id)
+  }, /*#__PURE__*/_react.default.createElement("figure", null, /*#__PURE__*/_react.default.createElement("img", {
+    src: _.default[props.animal.id]
+  }), /*#__PURE__*/_react.default.createElement("figcaption", null, /*#__PURE__*/_react.default.createElement("h3", null, props.animal.name))));
+};
+
+var _default = AnimalTile;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../img/400px/*.png":"img/400px/*.png"}],"src/animal-data.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var animalData = [{
+  id: 'seaLion1722',
+  name: 'Sea Lion',
+  year: 1722,
+  source: 'www.archive.org',
+  orientation: 'landscape'
+}, {
+  id: 'giraffe1500',
+  name: 'Giraffe',
+  year: 1500,
+  source: 'www.archive.org',
+  orientation: 'square'
+}, {
+  id: 'giraffe1832',
+  name: 'Giraffe',
+  year: 1832,
+  source: 'www.archive.org',
+  orientation: 'portrait'
+}, {
+  id: 'tamandua1770',
+  name: 'Tamandua Anteater',
+  year: 1770,
+  source: 'www.archive.org',
+  orientation: 'square'
+}, {
+  id: 'anteater1760',
+  name: 'Giant Anteater',
+  year: 1760,
+  source: 'www.archive.org',
+  orientation: 'square'
+}, {
+  id: 'spermWhale1888',
+  name: 'Sperm Whale',
+  year: 1888,
+  source: 'www.archive.org',
+  orientation: 'landscape'
+}, {
+  id: 'gorilla1800',
+  name: 'Gorilla',
+  year: 1800,
+  source: 'www.archive.org',
+  orientation: 'square'
+}];
+var _default = animalData;
+exports.default = _default;
+},{}],"src/utils.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.useWindowSize = useWindowSize;
+
+var _react = _interopRequireWildcard(require("react"));
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+var debounce = function debounce(func, delay) {
+  var inDebounce;
+  return function () {
+    clearTimeout(inDebounce);
+    inDebounce = setTimeout(function () {
+      return func();
+    }, delay);
+  };
+};
+
+function useWindowSize(delay) {
+  var _useState = (0, _react.useState)({
+    width: innerWidth,
+    height: innerHeight
+  }),
+      _useState2 = _slicedToArray(_useState, 2),
+      windowSize = _useState2[0],
+      setWindowSize = _useState2[1];
+
+  (0, _react.useEffect)(function () {
+    // Handler to call on window resize
+    function handleResize() {
+      // Set window width/height to state
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight
+      });
+    } // Add event listener
+
+
+    window.addEventListener("resize", debounce(handleResize, delay)); // Call handler right away so state gets updated with initial window size
+
+    handleResize(); // Remove event listener on cleanup
+
+    return function () {
+      return window.removeEventListener("resize", handleResize);
+    };
+  }, []); // Empty array ensures that effect is only run on mount
+
+  return windowSize;
+}
+},{"react":"node_modules/react/index.js"}],"src/tiled-animals.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = TiledAnimals;
+
+var _react = _interopRequireWildcard(require("react"));
+
+var _animalTile = _interopRequireDefault(require("./animal-tile.js"));
+
+var _animalData = _interopRequireDefault(require("./animal-data.js"));
+
+var _utils = require("./utils.js");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+function TiledAnimals(props) {
+  var tileWidth = 200;
+  var windowSize = (0, _utils.useWindowSize)(500);
+
+  var _useState = (0, _react.useState)(0),
+      _useState2 = _slicedToArray(_useState, 2),
+      numberOfSquares = _useState2[0],
+      setNumberOfSquares = _useState2[1];
+
+  var _useState3 = (0, _react.useState)([]),
+      _useState4 = _slicedToArray(_useState3, 2),
+      animalIds = _useState4[0],
+      setAnimalIds = _useState4[1];
+
+  (0, _react.useEffect)(function () {
+    return updateSquareNumber();
+  }), [windowSize];
+  (0, _react.useEffect)(function () {
+    return setAnimalIds(pickAnimalIds(numberOfSquares));
+  }, [numberOfSquares]);
+
+  function calculateNumberOfSquares(idealWidth, optionalIdealHeight) {
+    var idealHeight = optionalIdealHeight || idealWidth;
+    var columns = Math.floor(windowSize.width / idealWidth);
+    var rows = Math.floor(windowSize.height / idealHeight);
+    console.log(columns, rows);
+    return columns * rows;
+  }
+
+  function updateSquareNumber() {
+    var newNumber = calculateNumberOfSquares(tileWidth);
+
+    if (!numberOfSquares || newNumber > numberOfSquares) {
+      setNumberOfSquares(newNumber);
+    } else {
+      return;
+    }
+  }
+
+  ;
+
+  function pickAnimalIds(numberOfSquaresToFill) {
+    var squaresToFill = numberOfSquaresToFill - animalIds.length;
+    console.log('vullen:', squaresToFill);
+    var newNumberArray = [];
+    var numberOfAnimals = _animalData.default.length;
+
+    var pickRandomAnimals = function pickRandomAnimals() {
+      if (squaresToFill == 0) {
+        return;
+      }
+
+      var randomNumber = Math.floor(Math.random() * numberOfAnimals);
+      var orientation = _animalData.default[randomNumber].orientation;
+
+      if (squaresToFill < 8 && orientation == 'portrait') {
+        pickRandomAnimals();
+      } else if (squaresToFill < 3 && orientation == 'landscape') {
+        pickRandomAnimals();
+      } // if (!numberArray.includes(randomNumber)) {
+      else if (true) {
+          orientation == 'square' ? squaresToFill-- : squaresToFill = squaresToFill - 2;
+          newNumberArray.push(randomNumber);
+        }
+
+      pickRandomAnimals();
+    };
+
+    pickRandomAnimals();
+    console.log('Pick:', newNumberArray);
+    return [].concat(_toConsumableArray(animalIds), newNumberArray);
+  }
+
+  ;
+  var animalTiles = animalIds.map(function (animalNumber, index) {
+    return /*#__PURE__*/_react.default.createElement(_animalTile.default, {
+      animal: _animalData.default[animalNumber],
+      key: index
+    });
+  });
+  return /*#__PURE__*/_react.default.createElement("main", null, animalTiles);
+}
+},{"react":"node_modules/react/index.js","./animal-tile.js":"src/animal-tile.js","./animal-data.js":"src/animal-data.js","./utils.js":"src/utils.js"}],"src/index.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -32627,7 +32629,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51173" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50103" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -1,12 +1,16 @@
 import React from 'react';
+import {
+    Link,
+    // useParams
+} from 'react-router-dom';
 import animalImages from '../img/400px/*.png';
 
 
 const AnimalTile = (props) => {
     return (
-        <a
+        <Link
             className={`tile ${props.animal.orientation}`}
-            href='#'   
+            to={`/${props.animal.id}`  } 
         >
             <figure>
                 <img 
@@ -16,7 +20,7 @@ const AnimalTile = (props) => {
                     <h3>{props.animal.name}</h3>
                 </figcaption>
             </figure>
-        </a>
+        </Link>
     )
 };
 
