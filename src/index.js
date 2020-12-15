@@ -4,6 +4,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import TiledAmimals from './tiled-animals.js';
+import AnimalPage from './animal-page.js';
 
 import {
     BrowserRouter as Router,
@@ -23,7 +24,6 @@ function Header(props) {
         <header>
             <Link to="/"><h1>Unseen Animals</h1></Link>
             <ul>
-                <li>Refresh</li>
                 <li>Random</li>
                 <li>
                     <input
@@ -47,6 +47,9 @@ function App(props) {
                 <Header />
                 
                 <Switch>
+                    <Route path="/:animalId">
+                        <AnimalPage/>
+                    </Route>
                     <Route path="/">
                         <TiledAmimals
                         />

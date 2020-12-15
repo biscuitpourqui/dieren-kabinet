@@ -32269,31 +32269,31 @@ if ("development" !== "production") {
     style: _propTypes.default.object
   });
 }
-},{"react-router":"node_modules/react-router/esm/react-router.js","@babel/runtime/helpers/esm/inheritsLoose":"node_modules/@babel/runtime/helpers/esm/inheritsLoose.js","react":"node_modules/react/index.js","history":"node_modules/history/esm/history.js","prop-types":"node_modules/prop-types/index.js","tiny-warning":"node_modules/tiny-warning/dist/tiny-warning.esm.js","@babel/runtime/helpers/esm/extends":"node_modules/@babel/runtime/helpers/esm/extends.js","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js","tiny-invariant":"node_modules/tiny-invariant/dist/tiny-invariant.esm.js"}],"img/400px/anteater1760.png":[function(require,module,exports) {
-module.exports = "/anteater1760.74377ee2.png";
-},{}],"img/400px/giraffe1500.png":[function(require,module,exports) {
+},{"react-router":"node_modules/react-router/esm/react-router.js","@babel/runtime/helpers/esm/inheritsLoose":"node_modules/@babel/runtime/helpers/esm/inheritsLoose.js","react":"node_modules/react/index.js","history":"node_modules/history/esm/history.js","prop-types":"node_modules/prop-types/index.js","tiny-warning":"node_modules/tiny-warning/dist/tiny-warning.esm.js","@babel/runtime/helpers/esm/extends":"node_modules/@babel/runtime/helpers/esm/extends.js","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js","tiny-invariant":"node_modules/tiny-invariant/dist/tiny-invariant.esm.js"}],"img/400px/giraffe1500.png":[function(require,module,exports) {
 module.exports = "/giraffe1500.d9aa3f76.png";
 },{}],"img/400px/giraffe1832.png":[function(require,module,exports) {
 module.exports = "/giraffe1832.2f144665.png";
-},{}],"img/400px/seaLion1722.png":[function(require,module,exports) {
-module.exports = "/seaLion1722.114df4e2.png";
-},{}],"img/400px/tamandua1770.png":[function(require,module,exports) {
-module.exports = "/tamandua1770.1d5c14c6.png";
-},{}],"img/400px/spermWhale1888.png":[function(require,module,exports) {
-module.exports = "/spermWhale1888.22d35d9b.png";
+},{}],"img/400px/anteater1760.png":[function(require,module,exports) {
+module.exports = "/anteater1760.74377ee2.png";
 },{}],"img/400px/gorilla1800.png":[function(require,module,exports) {
 module.exports = "/gorilla1800.d7461099.png";
+},{}],"img/400px/tamandua1770.png":[function(require,module,exports) {
+module.exports = "/tamandua1770.1d5c14c6.png";
+},{}],"img/400px/seaLion1722.png":[function(require,module,exports) {
+module.exports = "/seaLion1722.114df4e2.png";
+},{}],"img/400px/spermWhale1888.png":[function(require,module,exports) {
+module.exports = "/spermWhale1888.22d35d9b.png";
 },{}],"img/400px/*.png":[function(require,module,exports) {
 module.exports = {
-  "anteater1760": require("./anteater1760.png"),
   "giraffe1500": require("./giraffe1500.png"),
   "giraffe1832": require("./giraffe1832.png"),
-  "seaLion1722": require("./seaLion1722.png"),
+  "anteater1760": require("./anteater1760.png"),
+  "gorilla1800": require("./gorilla1800.png"),
   "tamandua1770": require("./tamandua1770.png"),
-  "spermWhale1888": require("./spermWhale1888.png"),
-  "gorilla1800": require("./gorilla1800.png")
+  "seaLion1722": require("./seaLion1722.png"),
+  "spermWhale1888": require("./spermWhale1888.png")
 };
-},{"./anteater1760.png":"img/400px/anteater1760.png","./giraffe1500.png":"img/400px/giraffe1500.png","./giraffe1832.png":"img/400px/giraffe1832.png","./seaLion1722.png":"img/400px/seaLion1722.png","./tamandua1770.png":"img/400px/tamandua1770.png","./spermWhale1888.png":"img/400px/spermWhale1888.png","./gorilla1800.png":"img/400px/gorilla1800.png"}],"src/animal-tile.js":[function(require,module,exports) {
+},{"./giraffe1500.png":"img/400px/giraffe1500.png","./giraffe1832.png":"img/400px/giraffe1832.png","./anteater1760.png":"img/400px/anteater1760.png","./gorilla1800.png":"img/400px/gorilla1800.png","./tamandua1770.png":"img/400px/tamandua1770.png","./seaLion1722.png":"img/400px/seaLion1722.png","./spermWhale1888.png":"img/400px/spermWhale1888.png"}],"src/animal-tile.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -32563,7 +32563,46 @@ function TiledAnimals(props) {
   });
   return /*#__PURE__*/_react.default.createElement("main", null, animalTiles);
 }
-},{"react":"node_modules/react/index.js","./animal-tile.js":"src/animal-tile.js","./animal-data.js":"src/animal-data.js","./utils.js":"src/utils.js"}],"src/index.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","./animal-tile.js":"src/animal-tile.js","./animal-data.js":"src/animal-data.js","./utils.js":"src/utils.js"}],"src/animal-page.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _reactRouterDom = require("react-router-dom");
+
+var _utils = require("./utils.js");
+
+var _ = _interopRequireDefault(require("../img/400px/*.png"));
+
+var _animalData = _interopRequireDefault(require("./animal-data.js"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// let windowSize = useWindowSize(500);
+// let imageWidth = Math.ceil(windowSize.width / 400) * 400;
+// console.log(imageWidth);
+var AnimalPage = function AnimalPage(props) {
+  var animalId = (0, _reactRouterDom.useParams)().animalId;
+
+  var animal = _animalData.default.filter(function (item) {
+    return item.id === animalId;
+  })[0];
+
+  return /*#__PURE__*/_react.default.createElement("article", {
+    className: "animal=page"
+  }, /*#__PURE__*/_react.default.createElement("figure", null, /*#__PURE__*/_react.default.createElement("img", {
+    src: _.default[animal.id]
+  })), /*#__PURE__*/_react.default.createElement("h3", null, animal.name), /*#__PURE__*/_react.default.createElement("p", null, "Hier volgt informatie"));
+};
+
+var _default = AnimalPage;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","./utils.js":"src/utils.js","../img/400px/*.png":"img/400px/*.png","./animal-data.js":"src/animal-data.js"}],"src/index.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -32571,6 +32610,8 @@ var _react = _interopRequireDefault(require("react"));
 var _reactDom = _interopRequireDefault(require("react-dom"));
 
 var _tiledAnimals = _interopRequireDefault(require("./tiled-animals.js"));
+
+var _animalPage = _interopRequireDefault(require("./animal-page.js"));
 
 var _reactRouterDom = require("react-router-dom");
 
@@ -32584,7 +32625,7 @@ console.clear();
 function Header(props) {
   return /*#__PURE__*/_react.default.createElement("header", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
     to: "/"
-  }, /*#__PURE__*/_react.default.createElement("h1", null, "Unseen Animals")), /*#__PURE__*/_react.default.createElement("ul", null, /*#__PURE__*/_react.default.createElement("li", null, "Refresh"), /*#__PURE__*/_react.default.createElement("li", null, "Random"), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("input", {
+  }, /*#__PURE__*/_react.default.createElement("h1", null, "Unseen Animals")), /*#__PURE__*/_react.default.createElement("ul", null, /*#__PURE__*/_react.default.createElement("li", null, "Random"), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("input", {
     type: "search",
     placeholder: "Filter..."
   }))));
@@ -32594,6 +32635,8 @@ function App(props) {
   return /*#__PURE__*/_react.default.createElement(_reactRouterDom.BrowserRouter, null, /*#__PURE__*/_react.default.createElement("div", {
     id: "app"
   }, /*#__PURE__*/_react.default.createElement(Header, null), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Switch, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
+    path: "/:animalId"
+  }, /*#__PURE__*/_react.default.createElement(_animalPage.default, null)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
     path: "/"
   }, /*#__PURE__*/_react.default.createElement(_tiledAnimals.default, null)))));
 }
@@ -32601,7 +32644,7 @@ function App(props) {
 ;
 
 _reactDom.default.render( /*#__PURE__*/_react.default.createElement(App, null), document.getElementById('root'));
-},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","./tiled-animals.js":"src/tiled-animals.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js"}],"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","./tiled-animals.js":"src/tiled-animals.js","./animal-page.js":"src/animal-page.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js"}],"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -32629,7 +32672,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50103" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49948" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
