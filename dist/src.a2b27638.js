@@ -32269,31 +32269,31 @@ if ("development" !== "production") {
     style: _propTypes.default.object
   });
 }
-},{"react-router":"node_modules/react-router/esm/react-router.js","@babel/runtime/helpers/esm/inheritsLoose":"node_modules/@babel/runtime/helpers/esm/inheritsLoose.js","react":"node_modules/react/index.js","history":"node_modules/history/esm/history.js","prop-types":"node_modules/prop-types/index.js","tiny-warning":"node_modules/tiny-warning/dist/tiny-warning.esm.js","@babel/runtime/helpers/esm/extends":"node_modules/@babel/runtime/helpers/esm/extends.js","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js","tiny-invariant":"node_modules/tiny-invariant/dist/tiny-invariant.esm.js"}],"img/400px/giraffe1500.png":[function(require,module,exports) {
-module.exports = "/giraffe1500.d9aa3f76.png";
-},{}],"img/400px/giraffe1832.png":[function(require,module,exports) {
-module.exports = "/giraffe1832.2f144665.png";
-},{}],"img/400px/anteater1760.png":[function(require,module,exports) {
+},{"react-router":"node_modules/react-router/esm/react-router.js","@babel/runtime/helpers/esm/inheritsLoose":"node_modules/@babel/runtime/helpers/esm/inheritsLoose.js","react":"node_modules/react/index.js","history":"node_modules/history/esm/history.js","prop-types":"node_modules/prop-types/index.js","tiny-warning":"node_modules/tiny-warning/dist/tiny-warning.esm.js","@babel/runtime/helpers/esm/extends":"node_modules/@babel/runtime/helpers/esm/extends.js","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js","tiny-invariant":"node_modules/tiny-invariant/dist/tiny-invariant.esm.js"}],"img/400px/anteater1760.png":[function(require,module,exports) {
 module.exports = "/anteater1760.74377ee2.png";
+},{}],"img/400px/giraffe1500.png":[function(require,module,exports) {
+module.exports = "/giraffe1500.d9aa3f76.png";
 },{}],"img/400px/gorilla1800.png":[function(require,module,exports) {
 module.exports = "/gorilla1800.d7461099.png";
+},{}],"img/400px/spermWhale1888.png":[function(require,module,exports) {
+module.exports = "/spermWhale1888.22d35d9b.png";
 },{}],"img/400px/tamandua1770.png":[function(require,module,exports) {
 module.exports = "/tamandua1770.1d5c14c6.png";
 },{}],"img/400px/seaLion1722.png":[function(require,module,exports) {
 module.exports = "/seaLion1722.114df4e2.png";
-},{}],"img/400px/spermWhale1888.png":[function(require,module,exports) {
-module.exports = "/spermWhale1888.22d35d9b.png";
+},{}],"img/400px/giraffe1832.png":[function(require,module,exports) {
+module.exports = "/giraffe1832.2f144665.png";
 },{}],"img/400px/*.png":[function(require,module,exports) {
 module.exports = {
-  "giraffe1500": require("./giraffe1500.png"),
-  "giraffe1832": require("./giraffe1832.png"),
   "anteater1760": require("./anteater1760.png"),
+  "giraffe1500": require("./giraffe1500.png"),
   "gorilla1800": require("./gorilla1800.png"),
+  "spermWhale1888": require("./spermWhale1888.png"),
   "tamandua1770": require("./tamandua1770.png"),
   "seaLion1722": require("./seaLion1722.png"),
-  "spermWhale1888": require("./spermWhale1888.png")
+  "giraffe1832": require("./giraffe1832.png")
 };
-},{"./giraffe1500.png":"img/400px/giraffe1500.png","./giraffe1832.png":"img/400px/giraffe1832.png","./anteater1760.png":"img/400px/anteater1760.png","./gorilla1800.png":"img/400px/gorilla1800.png","./tamandua1770.png":"img/400px/tamandua1770.png","./seaLion1722.png":"img/400px/seaLion1722.png","./spermWhale1888.png":"img/400px/spermWhale1888.png"}],"src/animal-tile.js":[function(require,module,exports) {
+},{"./anteater1760.png":"img/400px/anteater1760.png","./giraffe1500.png":"img/400px/giraffe1500.png","./gorilla1800.png":"img/400px/gorilla1800.png","./spermWhale1888.png":"img/400px/spermWhale1888.png","./tamandua1770.png":"img/400px/tamandua1770.png","./seaLion1722.png":"img/400px/seaLion1722.png","./giraffe1832.png":"img/400px/giraffe1832.png"}],"src/animal-tile.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -32583,9 +32583,6 @@ var _animalData = _interopRequireDefault(require("./animal-data.js"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// let windowSize = useWindowSize(500);
-// let imageWidth = Math.ceil(windowSize.width / 400) * 400;
-// console.log(imageWidth);
 var AnimalPage = function AnimalPage(props) {
   var animalId = (0, _reactRouterDom.useParams)().animalId;
 
@@ -32593,10 +32590,14 @@ var AnimalPage = function AnimalPage(props) {
     return item.id === animalId;
   })[0];
 
+  var windowSize = (0, _utils.useWindowSize)(500);
+  var imageWidth = Math.ceil(windowSize.width / 400) * 400;
+  console.log(imageWidth);
+  var animalImages = imageWidth == 400 ? _.default : imageWidth == 1200 ? _.default : _.default;
   return /*#__PURE__*/_react.default.createElement("article", {
     className: "animal=page"
   }, /*#__PURE__*/_react.default.createElement("figure", null, /*#__PURE__*/_react.default.createElement("img", {
-    src: _.default[animal.id]
+    src: animalImages[animal.id]
   })), /*#__PURE__*/_react.default.createElement("h3", null, animal.name), /*#__PURE__*/_react.default.createElement("p", null, "Hier volgt informatie"));
 };
 
@@ -32672,7 +32673,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49948" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49942" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

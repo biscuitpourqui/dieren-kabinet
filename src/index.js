@@ -5,6 +5,7 @@ import ReactDOM from 'react-dom';
 
 import TiledAmimals from './tiled-animals.js';
 import AnimalPage from './animal-page.js';
+import RandomAnimalLink from './randomAnimalLink.js';
 
 import {
     BrowserRouter as Router,
@@ -24,7 +25,9 @@ function Header(props) {
         <header>
             <Link to="/"><h1>Unseen Animals</h1></Link>
             <ul>
-                <li>Random</li>
+                <li>
+                    <RandomAnimalLink />
+                </li>
                 <li>
                     <input
                         type="search"

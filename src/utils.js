@@ -38,3 +38,7 @@ export function useWindowSize(delay) {
   
     return windowSize;
   }
+
+  export function randomNumberFromRange(min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;
+  }
